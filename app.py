@@ -19,7 +19,7 @@ def generate_pdf():
     proyecto = request.form.get('proyecto', '').strip()
     trato = request.form.get('trato', '').strip()
 
-    doc_path = "plantilla.docx"
+    doc_path = os.path.join(os.path.dirname(__file__), 'plantilla.docx')
     output_doc_path = "temp.docx"
     output_pdf_path = f"{cliente} - {proyecto} - {trato}.pdf"
 
